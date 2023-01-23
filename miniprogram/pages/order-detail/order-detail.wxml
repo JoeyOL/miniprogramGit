@@ -1,0 +1,31 @@
+<!--pages/order-detail/order-detail.wxml-->
+<view class="publisher">
+  <view class="top">
+    <image src="{{orderInfo.userHeader}}" />
+    <text class="num1">{{orderInfo.userName}}</text>
+    <text class="num2">发布者</text>
+  </view>
+  <view class="body">
+    <view class="des">
+      <view class="type-time"> 
+        <text>{{orderInfo.orderType}}</text>
+        <text class="second">{{orderInfo.orderTime}}</text>
+      </view>
+      <text class="condition">{{orderInfo.orderCondition}}</text>
+    </view>
+    <view class="prime">
+      <text>{{orderInfo.orderBasis}}</text>
+    </view>
+    <view class="money">
+      <text>金额：{{orderInfo.orderMoney}}</text>
+      <view class="contact">
+        <image class="icon1" src="/images/消息白.png"/>
+        <image class="icon2" src="/images/电话白.png"/>
+    </view>
+    </view>
+  </view>
+</view>
+
+<view class="runner">
+  
+</view>
