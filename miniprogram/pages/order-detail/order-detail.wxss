@@ -1,10 +1,10 @@
-/* pages/order-detail/order-detail.wxss */
+/* pages/order-detail/order-detail.wxss
 .publisher{
   width: 700rpx;
   margin: 25rpx;
   background-color: white;
   border-radius: 20rpx;
-  box-shadow: 2rpx 2rpx 5rpx lightgray;
+  box-shadow: 2rpx 2rpx 5rpx rgb(201, 201, 201);
 }
 .publisher .top{
   display: flex;
@@ -64,10 +64,10 @@
 .publisher .body .des .condition{
   width: auto;
   position: relative;
-  margin-left: 225rpx;
+  margin-left: 255rpx;
   font-size: small;
-  color:#ff8000;
-  font-weight: 500;
+  color:#ffc386;
+  font-weight: 600;
 }
 .publisher .prime text{
    margin-left: 25rpx;
@@ -114,7 +114,9 @@
   text-align: center;
   line-height: 60rpx;
   font-size: 20rpx;
-  background-color:#ffdddd;
-  color: #fa0b0b;
+  /* background-color:#ffdddd;
+  color: #fa0b0b; */
+  /* color: white;
+  background-color: #ffa0a0;
   border-radius: 10rpx;
-}
+} */ 

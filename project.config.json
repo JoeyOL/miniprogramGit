@@ -79,5 +79,6 @@
   "useExtendedLib": {
     "kbone": true,
     "weui": true
-  }
+  },
+  "simulatorPluginLibVersion": {}
 }
