@@ -39,7 +39,7 @@
   height: 300rpx;
   width: 700rpx;
   margin: 40rpx 25rpx 0rpx 25rpx;
-  background-color: #e9fdfd;
+  background-color: #ceffff;
   border-radius: 2%;
   box-shadow: 5rpx 5rpx 8rpx lightgrey;
 }
@@ -86,11 +86,11 @@
   text-align: center;
   line-height:60rpx ;
   font-weight: 500;
-  color: #ffc857;
+  color: white;
   font-size: 20rpx;
   margin-right: 20rpx;
   border-radius: 10rpx;
-  background-color: #ffffa3;
+  background-color: #65abf1;
 }
 .describ-medium text{
   font-size: small;
@@ -102,10 +102,10 @@
   font-size: 20rpx;
   text-align: center;
   line-height: 60rpx;
-  color: #FF6666;
+  color: #ffffff;
   margin-top: 50rpx;
   margin-left: 425rpx;
-  background-color: #ffb9b9;
+  background-color: #fa8c8c;
   border-radius: 10%;
 }
 .order-accept{
@@ -143,11 +143,12 @@
 .order-accept-body .runner .num2{
   margin-left: 200rpx;
   width: 90rpx;
-  font-size: 20rpx;
+  font-size: 23rpx;
   font-weight: 500;
-  color:#FFCC00;
+  color:#fdcb00;
 }
 .order-finish .condition{
-   background-color: #336699;
+   /* background-color: #336699; */
+   background-color: #94e246;
    color: white;
 }

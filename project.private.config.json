@@ -1,7 +1,8 @@
 {
   "setting": {
     "compileHotReLoad": true,
-    "bigPackageSizeSupport": true
+    "bigPackageSizeSupport": true,
+    "urlCheck": false
   },
   "condition": {
     "miniprogram": {
@@ -84,6 +85,20 @@
         {
           "name": "订单详情",
           "pathName": "pages/order-detail/order-detail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "发布订单表格页面",
+          "pathName": "pages/publish-table/publish-table",
+          "query": "id=0",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "食堂外卖",
+          "pathName": "pages/publish-table-canteen/publish-table-canteen",
           "query": "",
           "launchMode": "default",
           "scene": null

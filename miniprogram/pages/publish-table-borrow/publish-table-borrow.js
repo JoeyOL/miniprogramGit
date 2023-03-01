@@ -1,11 +1,27 @@
-// pages/order/order.js
+// pages/publish-table-borrow/publish-table-borrow.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+  input_container:[{
+    image:'/images/收货地址 (2).png',
+    text:'收货地址',
+    placeholder:'请输入地址'
+  },
+  {
+    image:'/images/时间.png',
+    text:'预计归还时间',
+    placeholder:'请输入具体时间'
+  },
+  {
+    image:'/images/钱.png',
+    text:'金额',
+    placeholder:'请输入小费'
+  }
+],
+  borrow_tips:['归还时间务必准确','物品可以是游戏账号']
   },
 
   /**
