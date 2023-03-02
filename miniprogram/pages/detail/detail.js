@@ -5,14 +5,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-  userHeader:'/images/头像.jpg',
-  userName:'JoeyOL',
-  userPhone:'19128432548',
+  userHeader:'',
+  userName:'',
+  userPhone:'',
   },
-  changeName(e){
-  this.setData({
-    userName:e.detail.value,
-  })
+  change(e){
+   if(e.currentTarget.dataset.id==="name"){
+     this.setData({
+       userName:e.detail.value
+     })
+   }else if(e.currentTarget.dataset.id==="phone"){
+    this.setData({
+      userPhone:e.detail.value
+    })
+   }
+   
   },
   changeImg(){
     var that=this;
@@ -26,6 +33,30 @@ Page({
        })
       },
     })
+  },
+  //保存修改的方法
+  submit: function(){
+    var that =this;
+      wx.request({
+        method:"POST",
+        url:'http://127.0.0.1:3000/',//放置数据库的路径
+        data:that.data,
+        success:function(res){
+          wx.showToast({
+            title: '提交成功',
+            icon:"success",
+            duration:2000
+          })
+        },
+        fail: (res) => {
+          wx.showToast({
+            title: '提交失败',
+            icon:"error",
+            duration:2000
+          })
+        },
+        complete: (res) => {},
+      })
   },
   /**
    * 生命周期函数--监听页面加载

@@ -9,21 +9,20 @@
   <view class="nickname">
     <image class="icon" src="/images/名片.png" />
     <text>名字</text>
-    <input placeholder="请填写昵称(必填)" value="{{userName}}" bindinput="changeName"></input>
+    <input data-id="name" placeholder="请填写昵称(必填)" value="{{userName}}" bindinput="change"></input>
   </view>
   <view class="phone">
     <image src="/images/电话.png" class="icon"/>
     <text class="phone1">手机</text>
-    <text class="phone2">{{userPhone}}</text>
-    <view class="button" bindtap="changePhone">更换</view>
+    <input data-id="phone" placeholder="请填写手机号(必填)" value="{{userPhone}}" bindinput="change"></input>
   </view>
-  <view class="address" bindtap="changeAddress">
+  <!-- <view class="address" bindtap="changeAddress">
     <image src="/images/收货地址.png" class="icon"/>
     <text>我的地址</text>
-  </view>
+  </view> -->
 </view>
 
 
-<view class="button">
+<view class="button" bindtap="submit">
   <text>保存修改</text>
 </view>

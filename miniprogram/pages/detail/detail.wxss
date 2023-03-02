@@ -68,11 +68,11 @@
   width: 650rpx;
   border-bottom: 1rpx solid lightgray;
 }
-.table1 .phone .phone2{
-  margin-left:220rpx ;
-  font-size: small;
-  color: lightgrey;
-  font-weight: 600;
+.table1 .phone input{
+  margin-left: 150rpx;
+  text-align: right;
+  direction: ltr;
+  font-weight: 500;
 }
 .table1 .phone .button{
   text-align: center;

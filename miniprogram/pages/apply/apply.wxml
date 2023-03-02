@@ -5,11 +5,16 @@
 </view>
 
 <view class="table">
+
+
   <view class="name-id" wx:for="{{table}}">
     <image src="{{item.imageurl}}" mode="" />
     <text>{{item.title}}</text>
-    <input wx:if="{{item.text}}" placeholder="{{item.text}}" type="{{item.type}}"> </input>
+    <input wx:if="{{item.text}}" bindchange="change" data-index="{{index}}" placeholder="{{item.text}}" type="{{item.type}}"> </input>
   </view>
+  
+
+
   <view class="up-pic">
     <image src="{{idImg}}" mode="" bindtap="uploadImg" />
     <text class="plus1" bindtap="uploadImg">+</text>
@@ -27,6 +32,6 @@
   </view>
 </view>
 
-<view class="button">
+<view class="button" bindtap="submit">
   <text>提交申请</text>
 </view>
