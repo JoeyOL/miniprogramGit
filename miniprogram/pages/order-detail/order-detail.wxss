@@ -1,4 +1,4 @@
-/* pages/order-detail/order-detail.wxss */
+/* pages/order-detail/order-detail.wxss
 .publisher{
   width: 700rpx;
   margin: 25rpx;
@@ -116,7 +116,9 @@
   font-size: 20rpx;
   /* background-color:#ffdddd;
   color: #fa0b0b; */
-  color: white;
+
+  /* color: white;
+
   background-color: #ffa0a0;
   border-radius: 10rpx;
-}
+} */ 

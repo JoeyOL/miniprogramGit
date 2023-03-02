@@ -5,68 +5,92 @@ Page({
    * 页面的初始数据
    */
   data: {
-  express_order:[{
-    userInfo:{
-      header:'/images/头像.jpg',
-      nickname:'Joey',
-     },
-     orderCondition:'等待中',
-     orderTime:'2023-02-22 12:30:55',
-     orderType:'取快递',
-     expressNum:'2',
-     expressVol:'大件',
-     orderStartpoint:'八栋楼下快递柜',
-     orderFinishpoint:'荔园七栋',
-     orderCosts:'5'
-  }
-],
-  
-  canteen_order:[{
-     userInfo:{
-       header:'/images/runnerimg2.jpg',
-       nickname:'快乐胖子',
-     },
-     orderType:'食堂带饭',
-     orderCondition:'等待中',
-     orderTime:'2023-02-23 19:22:45',
-     foodNum:'1',
-     orderStartpoint:'四食堂',
-     orderFinishpoint:'荔园7栋',
-     orderCosts:'30'
-  }
-],
-  
-  borrow_order:[{
-    userInfo:{
-      header:'/images/runnerimg1.jpg',
-      nickname:'Lucy&David',
+
+
+    nav_bar:['取/寄快递','设备租借','食堂/外卖','帮忙做'],
+    page_id:0,
+
+    express_order: [{
+      userInfo: {
+        header: '/images/头像.jpg',
+        nickname: 'Joey',
+      },
+      orderCondition: '等待中',
+      orderTime: '2023-02-22 12:30:55',
+      orderType: '取快递',
+      expressNum: '2',
+      expressVol: '大件',
+      orderStartpoint: '八栋楼下快递柜',
+      orderFinishpoint: '荔园七栋',
+      orderCosts: '5'
+    }],
+
+    canteen_order: [{
+      userInfo: {
+        header: '/images/runnerimg2.jpg',
+        nickname: '快乐胖子',
+      },
+      orderType: '食堂带饭',
+      orderCondition: '等待中',
+      orderTime: '2023-02-23 19:22:45',
+      foodNum: '1',
+      orderStartpoint: '四食堂',
+      orderFinishpoint: '荔园7栋',
+      orderCosts: '30'
     },
-    orderType:'设备租借',
-    orderCondition:'等待中',
-    orderTime:'2023-02-23 19:22:45',
-    borrowNum:'1',
-    orderStartpoint:'今天下午',
-    orderFinishpoint:'后天上午',
-    orderCosts:'5'
-  }
-],
-   
-   help_order:[{
-    userInfo:{
-      header:'/images/header.png',
-      nickname:'Nobody',
-    },
-    orderType:'帮忙做',
-    orderCondition:'等待中',
-    orderTime:'2023-02-23 19:22:45',
-    startTime:'明天下午',
-    finishTime:'明天下午',
-    orderCosts:'5',
-    orderAddress:'荔园七栋'
-   }
-  ]
+    {
+      userInfo: {
+        header: '/images/runnerimg2.jpg',
+        nickname: '快乐胖子',
+      },
+      orderType: '食堂带饭',
+      orderCondition: '等待中',
+      orderTime: '2023-02-23 19:22:45',
+      foodNum: '1',
+      orderStartpoint: '四食堂',
+      orderFinishpoint: '荔园7栋',
+      orderCosts: '30'
+    }
+  ],
+
+    borrow_order: [{
+      userInfo: {
+        header: '/images/runnerimg1.jpg',
+        nickname: 'Lucy&David',
+      },
+      orderType: '设备租借',
+      orderCondition: '等待中',
+      orderTime: '2023-02-23 19:22:45',
+      borrowNum: '1',
+      orderStartpoint: '今天下午',
+      orderFinishpoint: '后天上午',
+      orderCosts: '5'
+    }],
+
+    help_order: [{
+      userInfo: {
+        header: '/images/header.png',
+        nickname: 'Nobody',
+      },
+      orderType: '帮忙做',
+      orderCondition: '等待中',
+      orderTime: '2023-02-23 19:22:45',
+      startTime: '明天下午',
+      finishTime: '明天下午',
+      orderCosts: '5',
+      orderAddress: '荔园七栋'
+    }]
+
   },
 
+
+  ClassifyOrder(e){
+    var index=e.currentTarget.dataset.index
+    console.log(index)
+    this.setData({
+      page_id:index
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

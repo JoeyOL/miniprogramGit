@@ -1,4 +1,4 @@
-<!--pages/order-detail/order-detail.wxml-->
+<!-- pages/order-detail/order-detail.wxml
 <view class="publisher">
   <view class="top">
     <image src="{{orderInfo.userHeader}}" />
@@ -7,7 +7,7 @@
   </view>
   <view class="body">
     <view class="des">
-      <view class="type-time"> 
+      <view class="type-time">
         <text>{{orderInfo.orderType}}</text>
         <text class="second">{{orderInfo.orderTime}}</text>
       </view>
@@ -19,13 +19,28 @@
     <view class="money">
       <text>金额：{{orderInfo.orderMoney}}</text>
       <view class="contact">
-        <image class="icon1" src="/images/消息白.png"/>
-        <image class="icon2" src="/images/电话白.png"/>
-    </view>
+        <image class="icon1" src="/images/消息白.png" />
+        <image class="icon2" src="/images/电话白.png" />
+      </view>
     </view>
   </view>
 </view>
 
 <view class="runner">
-  
+
+</view> -->
+
+<view class="expressorder" wx:if="{{orderInfo.type=='快递'}}">
+  <view class="container">
+    <view class="header">
+       <image src="{{orderInfo.userInfo.header}}" class="userImg"/>
+       <text class="userName">{{orderInfo.userInfo.nickname}}</text>
+       <text class="condition">{{orderInfo.orderCondition}}</text>
+    </view>
+
+    <view class="timeType">
+       <text class="publisheTime">{{orderInfo.orderTime}}</text>
+       <text class=""></text>
+    </view>
+  </view>
 </view>
