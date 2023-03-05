@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/publish/publish",
     "pages/home/home",
     "pages/login/login",
     "pages/mine/mine",
     "pages/detail/detail",
-    "pages/publish/publish",
     "pages/message/message",
     "pages/apply/apply",
     "pages/myorder/myorder",
@@ -19,15 +19,15 @@
     "list": [
       {
         "pagePath": "pages/home/home",
-        "text": "首页",
-        "iconPath": "images/首页.png",
-        "selectedIconPath": "images/首页 (1).png"
+        "text": "订单广场",
+        "iconPath": "images/发布.png",
+        "selectedIconPath":"images/发布 (1).png"
       },
       {
         "pagePath": "pages/publish/publish",
-        "text": "发布",
-        "iconPath": "images/发布.png",
-        "selectedIconPath": "images/发布 (1).png"
+        "text": "首页",
+        "iconPath": "images/首页.png",
+        "selectedIconPath": "images/首页 (1).png"
       },
       {
         "pagePath": "pages/mine/mine",

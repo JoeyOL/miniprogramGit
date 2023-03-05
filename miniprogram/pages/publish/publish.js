@@ -1,4 +1,5 @@
 // pages/publish/publish.js
+const fetch=require('../../utils/fetch.js')
 Page({
 
   /**
@@ -21,29 +22,37 @@ Page({
         imageurl: '/images/合作.png',
         descri: '帮忙做',
       }
-    ]
+    ],
+     // 显示面板指示点
+     indicatorDots: true,
+     // 图片自动切换
+     autoplay: true,
+     // 自动切换时间间隔
+     interval: 5000,
+     // 滑动动画时长
+     duration: 1000
   },
   
 
   onPublish(e){
-  var id=e.currentTarget.dataset.id;
-  if (!id){
-    wx.navigateTo({
+    var id=e.currentTarget.dataset.id;
+    if (!id){
+      wx.navigateTo({
       url: '/pages/publish-table/publish-table?id='+id,
     })
-  }else if (id==1){
-    wx.navigateTo({
-      url: '/pages/publish-table-canteen/publish-table-canteen?id='+id,
-    })
-  }else if (id==2){
-    wx.navigateTo({
-      url: '/pages/publish-table-borrow/publish-table-borrow?id='+id,
-    })
-  }else{
-    wx.navigateTo({
-      url: '/pages/publish-table-help/publish-table-help?id='+id,
-    })
-  }
+    }else if (id==1){
+      wx.navigateTo({
+        url: '/pages/publish-table-canteen/publish-table-canteen?id='+id,
+      })
+    }else if (id==2){
+      wx.navigateTo({
+        url: '/pages/publish-table-borrow/publish-table-borrow?id='+id,
+      })
+    }else{
+      wx.navigateTo({
+        url: '/pages/publish-table-help/publish-table-help?id='+id,
+      })
+    }
 
   },
 
@@ -51,7 +60,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    // 显示模态对话框
+    wx.showLoading({
+      title:'努力加载中'
+    })
+    // 请求数据
+    fetch('food/index').then((res) => {
+      // 请求成功，关闭对话框
+      wx.hideLoading();
+      // 把接口返回数据setData给listData
+      this.setData({
+        listData: res.data,
+      })
+    },() => {
+      // 请求失败，关闭对话框，执行fetch.js文件中的fail方法
+      wx.hideLoading();
+    });
+    
   },
 
   /**
