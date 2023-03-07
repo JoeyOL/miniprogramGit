@@ -8,12 +8,42 @@ Page({
   id:0,
   canteen:true,
   oeder_info:{
-    type:'',
-    take_address:'',
-    final_address:'',
+    userInfo:{
+      header:'',
+      nickName:''
+    },
+    accept_token:true,
+    hidden_postscript:'',
+    orderTime:'',
+    orderNum:'',
+    expressNum:'',
+    expressVol:"",
+    orderType:'',
+    orderStartpoint:'',
+    orderFinishpoint:'',
     postsrcipt:'',
-    total_cost:''
+    orderCost:'',
+    runnerInfo:{
+      header:'',
+      nickName:''
+    }
   },
+   
+  canteen_need:[{
+    image:'/images/订单 (3).png',
+    text:' 餐品数量',
+    placeholder:'请输入餐品数量'
+    },
+      {
+        image:'/images/订单 (3).png',
+        text:' 隐藏备注',
+        placeholder:'备注仅接单人可见？填是或否'
+        },
+    {
+      image:'/images/钱.png',
+    },
+],
+   
   canteen_tips:['请务必备注准确','总金额是餐品价格加小费'],
   delivery_tips:['请务必备注外卖订单手机尾号','请备注外卖存放地点']
   },
@@ -33,11 +63,11 @@ Page({
   var index=e.currentTarget.dataset.index
   if (index=='取件地址'){
     this.setData({
-      'order_info.take_address':e.detail.value
+      'order_info.orderStartpoint':e.detail.value
     })
   }else if(index=='目的地'){
     this.setData({
-      'order_info.final_address':e.detail.value
+      'order_info.orderFinishpoint':e.detail.value
     })
   }else if (index=='备注'){
     this.setData({
@@ -45,7 +75,7 @@ Page({
     })
   }else{
     this.setData({
-      'order_info.total_cost':e.detail.value
+      'order_info.orderCost':e.detail.value
     })
   }
   console.log(this.data.order_info)

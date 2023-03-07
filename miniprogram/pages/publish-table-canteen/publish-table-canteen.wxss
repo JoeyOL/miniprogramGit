@@ -48,24 +48,8 @@
   border-radius: 20rpx;
   border: 1rpx lightgray solid;
 }
-.button .canteen{
-  height: 80rpx;
-  text-align: center;
-  line-height: 80rpx;
-  font-size: small;
-  width: 200rpx;
+.button .active{
   color: rgb(250, 140, 96);
-  border-radius: 20rpx;
-  border: 1rpx lightsalmon solid;
-}
-.button .delivery{
-  height: 80rpx;
-  text-align: center;
-  line-height: 80rpx;
-  font-size: small;
-  width: 200rpx;
-  color: rgb(250, 140, 96);
-  border-radius: 20rpx;
   border: 1rpx lightsalmon solid;
 }
 .input-container{

@@ -22,13 +22,18 @@ Page({
     placeholder:'请输入结束时间'
   },
   {
+    image:'/images/收货地址 (2).png',
+    text:'隐藏备注',
+    placeholder:'备注仅接单人可见？填是或否'
+  },
+  {
     image:'/images/钱.png',
     text:'金额',
     placeholder:'请输入小费'
   }
 ],
 
-  help_tips:['地址时间务必准确!'],
+  help_tips:['地址时间务必准确'],
   },
 
   /**

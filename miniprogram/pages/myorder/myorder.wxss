@@ -149,6 +149,6 @@
 }
 .order-finish .condition{
    /* background-color: #336699; */
-   background-color: #94e246;
+   background-color: #8ad83c;
    color: white;
 }

@@ -14,6 +14,11 @@ App({
       });
     }
 
-    this.globalData = {};
+    this.globalData = {
+      userInfo:{
+        header:'/images/头像.jpg',
+        nickName:'JoeyOL'
+      }
+    };
   }
 });

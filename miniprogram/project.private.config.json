@@ -13,6 +13,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/publish-table/publish-table",
+          "query": "id=0",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

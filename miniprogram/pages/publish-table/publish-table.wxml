@@ -6,23 +6,25 @@
     <text>请选择类型</text>
   </view>
   <view class="button">
-    <view class="{{takeToken?'button-take':''}}" bindtap="onClick_type" data-index="取快递">代取快递 </view>
-    <view class="{{!takeToken?'button-email':''}}" bindtap="onClick_type" data-index="寄快递">代寄快递</view>
+    <view class="{{takeToken?'active':''}}" bindtap="onClick_type" data-index="取快递">代取快递 </view>
+    <view class="{{!takeToken?'active':''}}" bindtap="onClick_type" data-index="寄快递">代寄快递</view>
   </view>
+
+  
   <view class="input-container">
     <image src="/images/收货地址 (2).png" class="icon" />
     <text>{{takeToken?'收件':'取件'}}地址</text>
-    <input placeholder="请输入{{takeToken?'收件':'取件'}}地址"></input>
+    <input placeholder="请输入{{takeToken?'收件人':'取件'}}地址"></input>
   </view>
-  <view class="input-container">
+  <view class="input-container" wx:if="{{takeToken}}">
     <image src="/images/商家.png" class="icon" />
-    <text>快递商家</text>
+    <text>快递点</text>
     <input placeholder="{{takeToken?'请输入快递点(例如:荔园八栋楼下)':'指定快递寄件(无要求则填无)'}}" bindinput="Input_info"></input>
   </view>
   <view class="detail">
     <view class="descri">
       <image src="/images/订单 (3).png" class="icon" />
-      <text>{{takeToken?'取件':'寄件'}}信息</text>
+      <text>{{takeToken?'取件':'寄件'}}信息（备注）</text>
     </view>
     <view class="inputbox">
       <textarea placeholder="{{takeToken?'请输入取件码或者上传截图':'请输入收件人的地址联系方式等'}}(仅接单人可见)" maxlength="150"></textarea>
@@ -40,19 +42,6 @@
     <input placeholder="{{item.placeholder}}" placeholder-style="font-size:small;"></input>
   </view>
 
-  <view class="additional" bindtap="onClick_Addition" hidden="{{!takeToken}}">
-    <image src="/images/省略.png" class="icon" />
-    <text>更多要求</text>
-  </view>
-
-  <view class="onShow-container" hidden="{{!onClickAddition}}">
-    <view wx:for="{{additional}}" class="onShow">
-      <text>{{item.title}}</text>
-      <picker mode="selector" range="{{item.selector}}" bindchange="onClick_Addition_select" value="{{item.id}}" data-index="{{index}}">
-        <text class="selector">{{item.selector[item.id]}} ></text>
-      </picker>
-    </view>
-  </view>
 </view>
 
 <view class="tips">

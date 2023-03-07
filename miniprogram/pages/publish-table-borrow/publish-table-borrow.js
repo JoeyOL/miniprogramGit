@@ -6,14 +6,24 @@ Page({
    */
   data: {
   input_container:[{
-    image:'/images/收货地址 (2).png',
-    text:'收货地址',
-    placeholder:'请输入地址'
+    image:'/images/时间.png',
+    text:'租借开始时间',
+    placeholder:'请输入预计时间'
   },
   {
     image:'/images/时间.png',
-    text:'预计归还时间',
-    placeholder:'请输入具体时间'
+    text:'归还时间',
+    placeholder:'请输入预计时间'
+  },
+  {
+    image:'/images/收货地址 (2).png',
+    text:'租借数量',
+    placeholder:'请输入租借物品数量'
+  },
+  {
+    image:'/images/收货地址 (2).png',
+    text:'隐藏备注',
+    placeholder:'备注仅接单人可见？填是或否'
   },
   {
     image:'/images/钱.png',
@@ -21,7 +31,7 @@ Page({
     placeholder:'请输入小费'
   }
 ],
-  borrow_tips:['归还时间务必准确','物品可以是游戏账号']
+  borrow_tips:['归还时间务必准确','如果需要送货上门请在备注中说明']
   },
 
   /**

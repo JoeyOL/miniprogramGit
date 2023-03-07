@@ -34,6 +34,7 @@
   border-bottom: 6rpx solid rgb(94, 197, 223);
 }
 
+
 .canteenorder{
   margin-left: 25rpx;
   margin-top: 120rpx;
@@ -84,12 +85,13 @@
 .helporder .address{
   height: 120rpx;
 }
-.helporder .tag{
+.helporder .address .tag{
   width: 75rpx;
   height: 75rpx;
   color: white;
   font-size: small;
-  line-height: 72rpx;
+  text-indent: 11rpx;
+  line-height: 75rpx;
 }
 
 .expressorder{
@@ -195,10 +197,10 @@
 .address .tag{
   width: 75rpx;
   height: 75rpx;
-  text-indent: 21rpx;
+  text-indent: 23rpx;
   color: white;
   border-radius: 50%;
-  line-height: 72rpx;
+  line-height: 75rpx;
 }
 .address text{
   margin: 10rpx 35rpx;

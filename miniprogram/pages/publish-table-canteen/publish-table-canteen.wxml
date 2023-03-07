@@ -5,8 +5,8 @@
     <text>请选择类型</text>
   </view>
   <view class="button">
-    <view class="{{!canteen?'':'canteen'}}" bindtap="onClick_type" data-index="食堂">食堂代取</view>
-    <view class="{{canteen?'':'delivery'}}" data-index="外卖" bindtap="onClick_type">外卖代取</view>
+    <view class="{{canteen?'active':''}}" bindtap="onClick_type" data-index="食堂">食堂代取</view>
+    <view class="{{canteen?'':'active'}}" data-index="外卖" bindtap="onClick_type">外卖代取</view>
   </view>
   <view class="input-container">
     <image src="/images/收货地址 (2).png" class="icon" />
@@ -27,11 +27,10 @@
       <textarea placeholder="{{canteen?'请备注取餐窗口的具体位置和数量以及食物名称等':'请备注订外卖的手机号后四位以及哪一柜，以便接单人打开外卖柜等'}}必要信息" placeholder-style="font-size:small;" bindinput="Input_info" data-index="备注" ></textarea>
     </view>
   </view>
-  <view class="input-container">
-    <image src="/images/钱.png" class="icon" />
-    <text wx:if="{{canteen}}">总金额</text>
-    <text wx:if="{{!canteen}}">跑腿费</text>
-    <input placeholder="{{canteen?'请输入包括餐品价格和跑腿费的总金额':'请输入跑腿费'}}" bindinput="Input_info" data-index="金额"></input>
+  <view class="input-container" wx:for="{{canteen_need}}">
+    <image src="{{item.image}}" class="icon" />
+    <text>{{index==2?(canteen?'总金额':'跑腿费'):item.text}}</text>
+    <input placeholder="{{index==2?(canteen?'请输入包括餐品在内的总金额':'请输入跑腿费'):item.placeholder}}" bindinput="Input_info" data-index="金额"></input>
   </view>
 </view>
 
