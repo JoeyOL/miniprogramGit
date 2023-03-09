@@ -14,6 +14,32 @@ App({
       });
     }
 
-    this.globalData = {};
+    this.globalData = {
+      orderInfo:{
+        userInfo:{
+          header:'',
+          nickName:''
+        },
+        accept_token:false,//初始值为否
+        hidden_postscript:false,
+        orderTime:'',
+        orderType:'',
+        expressNum:'',
+        expressVol:'',
+        orderCondition:'',
+        orderStartpoint:'',
+        orderFinishpoint:'',
+        orderCost:'',
+        postscript:'',
+        startTime:'',
+        finishTime:'',
+        imgurl:'',
+        runnerInfo:{
+          header:'',
+          nickName:''
+        }
+
+      }
+    };
   }
 });
