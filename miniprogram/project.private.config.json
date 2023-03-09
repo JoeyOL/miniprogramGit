@@ -14,6 +14,34 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "取寄快递表单",
+          "pathName": "pages/publish-table/publish-table",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "租借模式",
+          "pathName": "pages/publish-table-borrow/publish-table-borrow",
+          "query": "id=2",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "食堂代取",
+          "pathName": "pages/publish-table-canteen/publish-table-canteen",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "表格帮助",
+          "pathName": "pages/publish-table-help/publish-table-help",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

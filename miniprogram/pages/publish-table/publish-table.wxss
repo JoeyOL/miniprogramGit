@@ -77,8 +77,9 @@
   border-bottom: 1rpx solid lightgray;
 }
 .input-container text{
-  margin-left: 25rpx;
+  margin-left: 20rpx;
   font-size: small;
+  width:300rpx;
 }
 .input-container input{
   direction: rtl;
@@ -181,7 +182,7 @@
 .submit-button{
   width: 500rpx;
   height: 100rpx;
-  line-height: 100rpx;
+  line-height: 60rpx;
   margin-top: 30rpx;
   border-radius: 20rpx;
   box-shadow: 2rpx 2rpx 5rpx lightgrey;
