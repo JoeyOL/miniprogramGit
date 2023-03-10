@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+
+
     nav_bar:['取/寄快递','设备租借','食堂/外卖','帮忙做'],
     page_id:0,
 
@@ -122,6 +124,7 @@ Page({
         nickName:''
       }
     }]
+
   },
   
   ClickOrderDetail(e){

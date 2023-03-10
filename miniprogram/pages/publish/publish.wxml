@@ -1,4 +1,19 @@
 <!--pages/publish/publish.wxml-->
+<!-- <轮播图效果> -->
+<!-- dataList为后台返回的数据 -->
+<block wx:for="{{listData}}" wx:key="itemlist">
+  <swiper indicator-dots="{{indicatorDots}}"  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <!-- 使用dataList的imgUrls，imgItem,id -->
+    <block wx:for="{{item.imgUrls}}" wx:for-item="imgItem" wx:key="{{item.id}}">
+      <swiper-item >
+        <image class="slide-image" src="{{imgItem.src}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</block>
+
+
+<!-- 四种功能 -->
 <view class="container">
   <view class="classify" wx:for="{{List}}" bindtap="onPublish" data-id="{{index}}">
      <view class="pic{{index}}">

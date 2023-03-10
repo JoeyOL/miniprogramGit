@@ -1,37 +1,76 @@
 // pages/detail/detail.js
+const fetch = require('../../utils/fetch.js')
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  userHeader:'/images/头像.jpg',
-  userName:'JoeyOL',
-  userPhone:'19128432548',
+    userInfo:{
+      header:'',
+      nickName:'',
+      phone:'',
+    }
   },
-  changeName(e){
-  this.setData({
-    userName:e.detail.value,
-  })
+  change(e){
+   if(e.currentTarget.dataset.id==="name"){
+     this.setData({
+       "userInfo.nickName":e.detail.value
+     })
+   }else if(e.currentTarget.dataset.id==="phone"){
+    this.setData({
+      "userInfo.phone":e.detail.value
+    })
+   }else{
+     this.setData({
+       "userInfo.header":e.detail.value
+     })
+   }
+   
   },
   changeImg(){
     var that=this;
     wx.chooseImage({
       count: 1,
-      sizeType: [],
-      sourceType: [],
       success: (result) => {
        that.setData({
-         userHeader:result.tempFilePaths,
+         "userInfo.header":result.tempFilePaths,
        })
       },
     })
+  },
+  //保存修改的方法
+  submit: function(){
+    var that =this;
+      wx.request({
+        method:"POST",
+        url:'http://127.0.0.1:3000/',//放置数据库的路径
+        data:that.data.userInfo,
+        success:function(res){
+          wx.showToast({
+            title: '提交成功',
+            icon:"success",
+            duration:2000
+          })
+        },
+        fail: (res) => {
+          wx.showToast({
+            title: '提交失败',
+            icon:"error",
+            duration:2000
+          })
+        },
+        complete: (res) => {},
+      })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    this.setData({
+      userInfo: app.globalData.userInfo
+    })
   },
 
   /**

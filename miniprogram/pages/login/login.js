@@ -1,4 +1,5 @@
 // pages/login/login.js
+//登录短信倒计时
 var counter=60;
 var settime=function(that){
   if (counter==0){
@@ -18,7 +19,7 @@ var settime=function(that){
     settime(that)
   },1000)
 }
-
+const app=getApp()
 
 Page({
 
