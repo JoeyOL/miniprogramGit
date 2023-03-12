@@ -1,1 +1,84 @@
 /* pages/login/login.wxss */
+.none{
+  padding-left: 125rpx;padding-top: 30rpx;background-color: white;
+}
+.logo{
+  display: flex;
+  flex-direction:column;
+  height:500rpx;
+  justify-content: space-around;
+  align-items: center;
+  width: 500rpx;
+  border-bottom: lightgrey 1rpx solid;
+}
+.table{
+  margin-top: 10rpx;
+}
+.avatar-wrapper {
+  padding: 0;
+  width: 56px !important;
+  border-radius: 8px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.avatar {
+  display: block;
+  width: 56px;
+  height: 56px;
+}
+
+.nickname{
+  padding-left: 25rpx;
+  background-color: white;
+}
+.nickname>view{
+  padding: 30rpx;display: flex;flex-direction: row;border-bottom: lightgrey 1rpx solid;
+  width: 600rpx;align-items: center;height: 50rpx;
+}
+.nickname>view>input{
+  height: 40rpx;width: 500rpx;padding-left: 30rpx;font-size: small;
+}
+.phone{
+  padding-left: 25rpx;background-color: white;
+}
+.phone > view{
+  padding: 30rpx;display: flex;flex-direction: row;border-bottom: lightgrey 1rpx solid;
+  width: 600rpx;align-items: center;height: 50rpx;
+}
+.phone > view> input{
+  height: 40rpx;width: 500rpx;padding-left: 30rpx;font-size: small;
+}
+.phone >view >image{
+  height: 100rpx;width: 100rpx;
+}
+.sendCode{
+  padding-left: 25rpx;
+  background-color: white;
+}
+.scview{
+  padding: 30rpx;display: flex;flex-direction: row;border-bottom: lightgrey 1rpx solid;width: 600rpx;align-items: center;
+}
+.scview>input{
+  height: 40rpx;width: 500rpx;padding-left: 30rpx;font-size: small;
+}
+.button1{
+  height: 40rpx;width: 150rpx;font-size: 20rpx;color: lightseagreen;padding-top: 18rpx;border-radius: 10rpx;border: lightseagreen 1rpx solid;text-align: center;font-weight: 600;line-height: 25rpx;
+}
+.button2{
+  height: 40rpx;width: 200rpx;font-size: 20rpx;color:gray;padding-top: 18rpx;border-radius: 10%;border: lightgray 1rpx solid;text-align: center;font-weight: 600;line-height: 25rpx;background-color: #eeeeee;
+}
+
+.button{
+  width: 500rpx;
+  height: 100rpx;
+  line-height: 60rpx;
+  margin-top: 30rpx;
+  border-radius: 20rpx;
+  box-shadow: 2rpx 2rpx 5rpx lightgrey;
+  margin-bottom: 30rpx;
+  margin-left: 100rpx;
+  color: rgb(245, 240, 240);
+  text-align: center;
+  background-color: rgb(96, 219, 96);
+}
