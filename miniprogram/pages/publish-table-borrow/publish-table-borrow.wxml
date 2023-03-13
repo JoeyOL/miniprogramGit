@@ -4,7 +4,7 @@
     <view class="descri">
       <view class="header">
         <image src="/images/礼物.png" class="icon" />
-        <text>租借物品描述</text>
+        <text>租借物品描述（备注）</text>
       </view>
       <view class="inputbox">
         <textarea name="postscript" value="{{order.postscript}}" placeholder="请输入要租借的物品以及名称" placeholder-style="font-size:small;"></textarea>

@@ -38,19 +38,19 @@ Page({
     var id=e.currentTarget.dataset.id;
     if (!id){
       wx.navigateTo({
-      url: '/pages/publish-table/publish-table?id='+id,
+      url: '/pages/publish-table/publish-table',
     })
     }else if (id==1){
       wx.navigateTo({
-        url: '/pages/publish-table-canteen/publish-table-canteen?id='+id,
+        url: '/pages/publish-table-canteen/publish-table-canteen'
       })
     }else if (id==2){
       wx.navigateTo({
-        url: '/pages/publish-table-borrow/publish-table-borrow?id='+id,
+        url: '/pages/publish-table-borrow/publish-table-borrow'
       })
     }else{
       wx.navigateTo({
-        url: '/pages/publish-table-help/publish-table-help?id='+id,
+        url: '/pages/publish-table-help/publish-table-help'
       })
     }
 

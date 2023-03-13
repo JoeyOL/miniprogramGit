@@ -11,6 +11,8 @@
     </block>
   </swiper>
 </block>
+
+
 <!-- 四种功能 -->
 <view class="container">
   <view class="classify" wx:for="{{List}}" bindtap="onPublish" data-id="{{index}}">

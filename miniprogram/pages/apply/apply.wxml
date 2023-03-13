@@ -16,7 +16,7 @@
 
 
   <view class="up-pic">
-    <image src="{{idImg}}" mode="" bindtap="uploadImg" />
+    <image src="{{userInfo.idImg}}" mode="" bindtap="uploadImg" />
     <text class="plus1" bindtap="uploadImg">+</text>
     <!-- <text class="plus2" >点击添加/更换照片</text> -->
   </view>

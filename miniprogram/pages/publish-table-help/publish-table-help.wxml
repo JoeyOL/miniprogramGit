@@ -4,7 +4,7 @@
     <view class="descri">
       <view class="header">
         <image src="/images/订单 (2).png" class="icon"/>
-        <text>求助事件</text>
+        <text>求助事件（备注）</text>
       </view>
       <view class="inputbox">
         <textarea name="postscript" placeholder="请输入求助事件的具体细节" placeholder-style="font-size:small;"></textarea>

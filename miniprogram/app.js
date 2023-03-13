@@ -26,7 +26,6 @@ App({
     // this.globalData.userInfo = wx.getStorageSync('userInfo')
     // console.log(this.globalData.userInfo)
 
-
    
   },
   // //登录测试

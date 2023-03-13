@@ -24,12 +24,12 @@ Page({
     title:'学生证/学生卡'
   }],
   //学生证图片
-  idImg:'',
   //用户数据
-  user:{
-    name:'',
-    id:"",
-    imagesrc:"idImg"
+  userInfo:{
+    nickName:'',
+    phone:"",
+    header:"",
+    idImg:''
   },
   
   
@@ -49,11 +49,11 @@ Page({
   change:function(e){
     if(e.currentTarget.dataset.index===0){
       this.setData({
-        "user.name":e.detail.value
+        "userInfo.nickName":e.detail.value
       })
     }else if(e.currentTarget.dataset.index===1){
       this.setData({
-        "user.id":e.detail.value
+        "userInfo.phone":e.detail.value
       })
     }
     
@@ -65,7 +65,7 @@ Page({
       count: 1,
       success: (result) => {
         that.setData({
-          idImg:result.tempFilePaths
+          "userInfo.idImg":result.tempFilePaths
         })
       },
       fail: (res) => {},

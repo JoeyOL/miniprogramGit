@@ -14,7 +14,7 @@
 
     <view class="header">
       <image src="{{item.userInfo.header}}" class="profilepic"/>
-      <text class="userNickname">{{item.userInfo.nickname}}</text>
+      <text class="userNickname">{{item.userInfo.nickName}}</text>
       <text>{{item.orderCondition}}</text>
     </view>
 
@@ -24,7 +24,7 @@
     </view>
 
     <view class="numVol">
-      <text class="num">数量:{{item.expressNum}}件</text>
+      <text class="num">数量:{{item.expressNum}}</text>
       <text class="vol">{{item.expressVol}}</text>
     </view>
    
@@ -40,8 +40,8 @@
     </view>
 
     <view class="costs">
-      <text class="icon">金额:{{item.orderCosts}}块</text>
-      <text class="detail">详情</text>
+      <text class="icon">金额:{{item.orderCost}}块</text>
+      <text class="detail" bindtap="ClickOrderDetail" data-index="{{item}}">详情</text>
     </view>
   </view>
 </view>
@@ -52,7 +52,7 @@
 
     <view class="header">
       <image src="{{item.userInfo.header}}" class="profilepic"/>
-      <text class="userNickname">{{item.userInfo.nickname}}</text>
+      <text class="userNickname">{{item.userInfo.nickName}}</text>
       <text>{{item.orderCondition}}</text>
     </view>
 
@@ -62,7 +62,7 @@
     </view>
   
     <view class="numVol">
-      <text class="num">数量:{{item.foodNum}}份</text>
+      <text class="num">数量:{{item.expressNum}}</text>
       <text class="vol"></text>
     </view>
 
@@ -78,8 +78,8 @@
     </view>
 
     <view class="costs">
-      <text class="icon">金额:{{item.orderCosts}}块</text>
-      <text class="detail">详情</text>
+      <text class="icon">金额:{{item.orderCost}}块</text>
+      <text class="detail" bindtap="ClickOrderDetail" data-index="{{item}}">详情</text>
     </view>
 
   </view>
@@ -90,7 +90,7 @@
 
     <view class="header">
       <image src="{{item.userInfo.header}}" class="profilepic"/>
-      <text class="userNickname">{{item.userInfo.nickname}}</text>
+      <text class="userNickname">{{item.userInfo.nickName}}</text>
       <text>{{item.orderCondition}}</text>
     </view>
 
@@ -100,7 +100,7 @@
     </view>
   
     <view class="numVol">
-      <text class="num">数量:{{item.borrowNum}}个</text>
+      <text class="num">数量:{{item.expressNum}}</text>
       <text class="vol"></text>
     </view>
 
@@ -116,8 +116,8 @@
     </view>
 
     <view class="costs">
-      <text class="icon">金额:{{item.orderCosts}}块</text>
-      <text class="detail">详情</text>
+      <text class="icon">金额:{{item.orderCost}}块</text>
+      <text class="detail" bindtap="ClickOrderDetail" data-index="{{item}}">详情</text>
     </view>
   </view>
 </view>
@@ -127,7 +127,7 @@
 
   <view class="header">
       <image src="{{item.userInfo.header}}" class="profilepic"/>
-      <text class="userNickname">{{item.userInfo.nickname}}</text>
+      <text class="userNickname">{{item.userInfo.nickName}}</text>
       <text>{{item.orderCondition}}</text>
     </view>
 
@@ -144,12 +144,12 @@
     <view class="address">
       <view class="startpoint">
          <view class="tag">地点</view>
-         <text>{{item.orderAddress}}</text>
+         <text>{{item.orderStartpoint}}</text>
       </view>
     </view>
 
     <view class="costs">
-      <text class="icon">金额:{{item.orderCosts}}块</text>
-      <text class="detail">详情</text>
+      <text class="icon">金额:{{item.orderCost}}块</text>
+      <text class="detail" bindtap="ClickOrderDetail" data-index="{{item}}">详情</text>
     </view>
 </view>

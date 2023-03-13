@@ -13,76 +13,127 @@ Page({
     express_order: [{
       userInfo: {
         header: '/images/头像.jpg',
-        nickname: 'Joey',
+        nickName: 'Joey',
       },
+      accept_token:false,
+      hidden_postscript:false,
       orderCondition: '等待中',
+      orderNum:'22574852',
       orderTime: '2023-02-22 12:30:55',
       orderType: '取快递',
-      expressNum: '2',
+      imgurl:'',
+      postscript:'在6栋背后的玻璃房内，号码是25480', 
+      expressNum: '2个',
       expressVol: '大件',
       orderStartpoint: '八栋楼下快递柜',
       orderFinishpoint: '荔园七栋',
-      orderCosts: '5'
+      orderCost: '5',
+      runnerInfo:{
+        header:'',
+        nickName:''
+      }
     }],
 
     canteen_order: [{
       userInfo: {
-        header: '/images/runnerimg2.jpg',
-        nickname: '快乐胖子',
+        header: '/images/runnerimg1.jpg',
+        nickName: 'Alien',
       },
-      orderType: '食堂带饭',
+      accept_token:false,
+      hidden_postscript:false,
+      orderType: '食堂代取',
+      orderNum:'2259423',
+      postscript:'麻烦帮忙带一份四食堂二楼的绝味螺狮粉',
       orderCondition: '等待中',
       orderTime: '2023-02-23 19:22:45',
-      foodNum: '1',
-      orderStartpoint: '四食堂',
-      orderFinishpoint: '荔园7栋',
-      orderCosts: '30'
+      expressNum: '1',
+      expressVol:'',
+      orderStartpoint: '四食堂二楼',
+      orderFinishpoint: '荔园8栋1802C',
+      orderCost: '30',
+      runnerInfo:{
+        header:'',
+        nickName:'',
+      }
     },
     {
       userInfo: {
         header: '/images/runnerimg2.jpg',
-        nickname: '快乐胖子',
+        nickName: '快乐胖子',
       },
-      orderType: '食堂带饭',
+      accept_token:false,
+      hidden_postscript:false,
+      orderNum:"2558843",
+      postscript:'四食堂一楼的小笼包一份', 
+      orderType: '食堂代取',
       orderCondition: '等待中',
       orderTime: '2023-02-23 19:22:45',
-      foodNum: '1',
+      expressNum: '1份',
+      expressVol:'',
       orderStartpoint: '四食堂',
       orderFinishpoint: '荔园7栋',
-      orderCosts: '30'
+      orderCost: '30',
+      runnerInfo:{
+        header:"",
+        nickName:''
+      }
     }
   ],
 
     borrow_order: [{
       userInfo: {
         header: '/images/runnerimg1.jpg',
-        nickname: 'Lucy&David',
+        nickName: 'LucyDavid',
       },
+      accept_token:false,
+      hidden_postscript:false,
+      orderNum:'2561323',
+      postscript:'想要租借一套螺丝刀装备，麻烦送到荔枝园5栋1903A',
       orderType: '设备租借',
       orderCondition: '等待中',
       orderTime: '2023-02-23 19:22:45',
-      borrowNum: '1',
+      expressNum: '1个',
+      expressVol:'',
       orderStartpoint: '今天下午',
       orderFinishpoint: '后天上午',
-      orderCosts: '5'
+      orderCost: '5',
+      runnerInfo:{
+        header:"",
+        nickName:''
+      }
     }],
 
     help_order: [{
       userInfo: {
         header: '/images/header.png',
-        nickname: 'Nobody',
+        nickName: 'Nobody',
       },
+      accept_token:false,
+      hidden_postscript:false,
+      orderNum:'2463134',
+      postscript:'希望有人能帮忙打扫以下宿舍，在十栋1802',
       orderType: '帮忙做',
       orderCondition: '等待中',
       orderTime: '2023-02-23 19:22:45',
       startTime: '明天下午',
       finishTime: '明天下午',
-      orderCosts: '5',
-      orderAddress: '荔园七栋'
+      orderCost: '5',
+      orderStartpoint: '荔园10栋',
+      runnerInfo:{
+        header:'',
+        nickName:''
+      }
     }]
 
   },
-
+  
+  ClickOrderDetail(e){
+     let index=JSON.stringify(e.currentTarget.dataset.index)
+    console.log(index)
+     wx.navigateTo({
+       url: '/pages/order-detail/order-detail?id='+index,
+     })
+  },
 
   ClassifyOrder(e){
     var index=e.currentTarget.dataset.index

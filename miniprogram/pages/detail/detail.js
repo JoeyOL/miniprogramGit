@@ -1,23 +1,31 @@
 // pages/detail/detail.js
+const fetch = require('../../utils/fetch.js')
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  userHeader:'',
-  userName:'',
-  userPhone:'',
+    userInfo:{
+      header:'',
+      nickName:'',
+      phone:'',
+    }
   },
   change(e){
    if(e.currentTarget.dataset.id==="name"){
      this.setData({
-       userName:e.detail.value
+       "userInfo.nickName":e.detail.value
      })
    }else if(e.currentTarget.dataset.id==="phone"){
     this.setData({
-      userPhone:e.detail.value
+      "userInfo.phone":e.detail.value
     })
+   }else{
+     this.setData({
+       "userInfo.header":e.detail.value
+     })
    }
    
   },
@@ -25,11 +33,9 @@ Page({
     var that=this;
     wx.chooseImage({
       count: 1,
-      sizeType: [],
-      sourceType: [],
       success: (result) => {
        that.setData({
-         userHeader:result.tempFilePaths,
+         "userInfo.header":result.tempFilePaths,
        })
       },
     })
@@ -40,7 +46,7 @@ Page({
       wx.request({
         method:"POST",
         url:'http://127.0.0.1:3000/',//放置数据库的路径
-        data:that.data,
+        data:that.data.userInfo,
         success:function(res){
           wx.showToast({
             title: '提交成功',
@@ -62,7 +68,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    this.setData({
+      userInfo: app.globalData.userInfo
+    })
   },
 
   /**
